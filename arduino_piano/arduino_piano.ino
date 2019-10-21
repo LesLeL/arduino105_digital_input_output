@@ -3,6 +3,10 @@
 #define button3 D2
 #define button4 D7
 #define buzzer  D1
+#define noteDis 311
+#define noteFis 370
+#define noteGis 415
+#define noteAis 466
 
 void setup() {
   pinMode(button1, INPUT_PULLUP);
@@ -13,10 +17,10 @@ void setup() {
 }
 
 void loop() {
-  playTone(button1, 311);
-  playTone(button2, 370);
-  playTone(button3, 415);
-  playTone(button4, 466);
+  playTone(button1, noteDis);
+  playTone(button2, noteFis);
+  playTone(button3, noteGis);
+  playTone(button4, noteAis);
 }
 
 void playTone(int buttonPin, int frequency) {
