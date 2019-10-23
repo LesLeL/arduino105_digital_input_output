@@ -1,3 +1,4 @@
+//Input/output pin definitions
 #define button1 D5
 #define button2 D6
 #define button3 D7
@@ -7,8 +8,8 @@
 
 void setup() {
   Serial.begin(9600);
-  pinMode(button1, INPUT_PULLUP);
-  pinMode(button2, INPUT_PULLUP);
+  pinMode(button1, INPUT_PULLUP); //Buttons are using INPUT_PULLUP mode
+  pinMode(button2, INPUT_PULLUP); //to avoid using additional resistors.
   pinMode(button3, INPUT_PULLUP);
   pinMode(led1, OUTPUT);
   pinMode(led2, OUTPUT);
@@ -21,6 +22,10 @@ void loop() {
   toggleLed(button3, led3);
 }
 
+/*
+ * Changes state of given output pin based on given input pin
+ * e.g. LED diode is turned on as long as button is being pressed.
+ */
 void toggleLed(int buttonPin, int ledPin) {
   int buttonState = digitalRead(buttonPin);
   if (buttonState == LOW) {
