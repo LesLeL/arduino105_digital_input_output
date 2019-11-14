@@ -1,7 +1,7 @@
 //Input/output pin definitions
-#define button1 D5
-#define button2 D6
-#define button3 D2
+#define button1 D2
+#define button2 D5
+#define button3 D6
 #define button4 D7
 #define buzzer  D1
 
